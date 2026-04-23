@@ -1,6 +1,7 @@
 body {
   background-color: var(--color-background-page);
   color: var(--color-text);
+  font-family: var(--font-body);
 }
 
 header {
@@ -20,6 +21,7 @@ nav {
 
 h1, h2 {
   color: var(--color-accent);
+  font-family: var(--font-display);
 }
 
 a {
@@ -40,4 +42,12 @@ th, td {
   border-bottom: 1px solid var(--color-border);
   padding: 6px 12px;
   text-align: left;
+}
+
+svg.icon {
+  display: inline;
+  height: 3em;
+  width: 3em;
+  vertical-align: top;
+  fill: currentColor;
 }

@@ -10,4 +10,7 @@
   --color-link: var(--color-accent);
 
   --color-border: rgb(200 200 195);
+
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 }
