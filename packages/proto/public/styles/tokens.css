@@ -1,0 +1,13 @@
+:root {
+  --color-background-page: rgb(240 240 235);
+  --color-background-header: rgb(28 42 64);
+  --color-background-box: rgb(255 255 255);
+
+  --color-text: rgb(40 40 40);
+  --color-text-header: rgb(255 255 255);
+
+  --color-accent: rgb(42 100 160);
+  --color-link: var(--color-accent);
+
+  --color-border: rgb(200 200 195);
+}
