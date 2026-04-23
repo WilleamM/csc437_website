@@ -13,4 +13,9 @@
 
   --font-body: "Inter", Arial, Helvetica, sans-serif;
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
 }
