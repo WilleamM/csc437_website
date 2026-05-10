@@ -82,3 +82,32 @@ svg.icon {
   vertical-align: top;
   fill: currentColor;
 }
+
+ul.exercise-list {
+  list-style: none;
+  padding: 0;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+ul.exercise-list li {
+  background-color: var(--color-background-box);
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+ul.exercise-list li a {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+ul.exercise-list li p {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
