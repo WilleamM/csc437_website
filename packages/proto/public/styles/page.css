@@ -59,10 +59,57 @@ a {
   color: var(--color-link);
 }
 
-dl, table, ul {
+dl, table {
   background-color: var(--color-background-box);
   border: 1px solid var(--color-border);
   padding: 12px 16px;
+}
+
+ul {
+  background-color: var(--color-background-box);
+  border: 1px solid var(--color-border);
+  padding: 12px 16px;
+}
+
+dt {
+  font-weight: bold;
+  color: var(--color-accent);
+  margin-top: var(--space-sm);
+}
+
+dt:first-child {
+  margin-top: 0;
+}
+
+dd {
+  margin-left: var(--space-md);
+  margin-bottom: 4px;
+}
+
+ul.workout-list {
+  list-style: none;
+  padding: 0;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+ul.workout-list li {
+  background-color: var(--color-background-box);
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+}
+
+ul.workout-list li a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+ul.workout-list li a:hover {
+  text-decoration: underline;
 }
 
 table {
