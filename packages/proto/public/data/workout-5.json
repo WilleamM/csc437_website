@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Conventional Deadlift",
+    "href": "exercise-deadlift.html",
+    "muscles": "Hamstrings, Glutes, Back",
+    "equipment": "Barbell"
+  },
+  {
+    "name": "Barbell Row",
+    "href": "exercise-row.html",
+    "muscles": "Back, Biceps",
+    "equipment": "Barbell"
+  },
+  {
+    "name": "Lat Pulldown",
+    "href": "exercise-pulldown.html",
+    "muscles": "Lats, Biceps",
+    "equipment": "Cable Machine"
+  }
+]

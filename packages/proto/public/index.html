@@ -24,14 +24,27 @@
     </nav>
   </header>
 
+  <div class="welcome-banner">
+    <p>Welcome back, <strong>Willeam</strong> 👋</p>
+    <p class="welcome-date" id="today-date"></p>
+  </div>
+
   <main>
     <h2>My Workouts</h2>
     <ul class="workout-list">
-      <li><a href="workout-1.html">Monday - Upper Body</a></li>
-      <li><a href="workout-2.html">Wednesday - Lower Body</a></li>
-      <li><a href="workout-3.html">Friday - Full Body</a></li>
+      <li><a href="workout-1.html">Monday — Upper Body</a></li>
+      <li><a href="workout-2.html">Wednesday — Lower Body</a></li>
+      <li><a href="workout-3.html">Friday — Full Body</a></li>
+      <li><a href="workout-4.html">Monday — Push Day</a></li>
+      <li><a href="workout-5.html">Wednesday — Pull Day</a></li>
     </ul>
   </main>
+
+  <script>
+    const dateEl = document.getElementById("today-date");
+    const today = new Date();
+    dateEl.textContent = today.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  </script>
 
   <script>
     document.getElementById("dark-mode-label").onchange = function(event) {

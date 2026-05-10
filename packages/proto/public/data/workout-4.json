@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Barbell Bench Press",
+    "href": "exercise-bench.html",
+    "muscles": "Chest, Shoulders, Triceps",
+    "equipment": "Barbell, Bench"
+  },
+  {
+    "name": "Overhead Press",
+    "href": "exercise-ohp.html",
+    "muscles": "Shoulders, Triceps",
+    "equipment": "Barbell"
+  },
+  {
+    "name": "Incline Bench Press",
+    "href": "exercise-incline.html",
+    "muscles": "Upper Chest, Shoulders, Triceps",
+    "equipment": "Barbell, Bench"
+  }
+]
