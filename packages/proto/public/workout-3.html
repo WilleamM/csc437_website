@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "@unbndl/html": "https://unpkg.com/@unbndl/html"
+    }
+  }
+  </script>
+  <script type="module">
+    import { define } from "@unbndl/html";
+    import { WorkoutExerciseElement } from "/js/workout-exercise.js";
+
+    define({
+      "workout-exercise": WorkoutExerciseElement
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -29,21 +44,27 @@
 
     <h2>Exercises</h2>
     <ul class="exercise-list">
-      <li>
-        <a href="exercise-squat.html">Barbell Squat</a>
-        <p>Muscles: Quads, Glutes, Hamstrings</p>
-        <p>Equipment: Barbell, Squat Rack</p>
-      </li>
-      <li>
-        <a href="exercise-bench.html">Barbell Bench Press</a>
-        <p>Muscles: Chest, Shoulders, Triceps</p>
-        <p>Equipment: Barbell, Bench</p>
-      </li>
-      <li>
-        <a href="exercise-row.html">Barbell Row</a>
-        <p>Muscles: Back, Biceps</p>
-        <p>Equipment: Barbell</p>
-      </li>
+      <workout-exercise
+        href="exercise-squat.html"
+        muscles="Quads, Glutes, Hamstrings"
+        equipment="Barbell, Squat Rack"
+      >
+        Barbell Squat
+      </workout-exercise>
+      <workout-exercise
+        href="exercise-bench.html"
+        muscles="Chest, Shoulders, Triceps"
+        equipment="Barbell, Bench"
+      >
+        Barbell Bench Press
+      </workout-exercise>
+      <workout-exercise
+        href="exercise-row.html"
+        muscles="Back, Biceps"
+        equipment="Barbell"
+      >
+        Barbell Row
+      </workout-exercise>
     </ul>
   </main>
 </body>
