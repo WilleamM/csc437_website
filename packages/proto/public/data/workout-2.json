@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Barbell Squat",
+    "href": "exercise-squat.html",
+    "muscles": "Quads, Glutes, Hamstrings",
+    "equipment": "Barbell, Squat Rack"
+  },
+  {
+    "name": "Romanian Deadlift",
+    "href": "exercise-rdl.html",
+    "muscles": "Hamstrings, Glutes",
+    "equipment": "Barbell"
+  }
+]

@@ -19,9 +19,11 @@
   <script type="module">
     import { define } from "@unbndl/html";
     import { WorkoutExerciseElement } from "/js/workout-exercise.js";
+    import { WorkoutExercisesElement } from "/js/workout-exercises.js";
 
     define({
-      "workout-exercise": WorkoutExerciseElement
+      "workout-exercise": WorkoutExerciseElement,
+      "workout-exercises": WorkoutExercisesElement
     });
   </script>
 </head>
@@ -43,22 +45,7 @@
     </dl>
 
     <h2>Exercises</h2>
-    <ul class="exercise-list">
-      <workout-exercise
-        href="exercise-squat.html"
-        muscles="Quads, Glutes, Hamstrings"
-        equipment="Barbell, Squat Rack"
-      >
-        Barbell Squat
-      </workout-exercise>
-      <workout-exercise
-        href="exercise-rdl.html"
-        muscles="Hamstrings, Glutes"
-        equipment="Barbell"
-      >
-        Romanian Deadlift
-      </workout-exercise>
-    </ul>
+    <workout-exercises src="/data/workout-2.json"></workout-exercises>
   </main>
 </body>
 </html>
