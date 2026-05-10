@@ -13,6 +13,10 @@
 <body>
   <header>
     <h1>Workout Tracker</h1>
+      <label id="dark-mode-label">
+        <input type="checkbox" autocomplete="off"/>
+        Dark Mode
+      </label>
     <nav>
       <a href="user.html">My Profile</a>
       <a href="plan.html">My Workout Plan</a>
@@ -28,5 +32,26 @@
       <li><a href="workout-3.html">Friday - Full Body</a></li>
     </ul>
   </main>
+
+  <script>
+    document.getElementById("dark-mode-label").onchange = function(event) {
+      const checked = event.target.checked;
+      const customEvent = new CustomEvent("darkmode:toggle", {
+        bubbles: true,
+        detail: { darkMode:checked}
+      });
+      event.currentTarget.dispatchEvent(customEvent);
+      event.stopPropagation();
+    };
+
+    document.body.addEventListener("darkmode:toggle", function(event) {
+      if (event.detail.darkMode) {
+        event.currentTarget.classList.add("dark-mode");
+      } else {
+        event.currentTarget.classList.remove("dark-mode");
+      }
+    });
+  </script>
+  
 </body>
 </html>
