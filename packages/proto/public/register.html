@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register — Workout Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/reset.css" />
+  <link rel="stylesheet" href="/styles/tokens.css" />
+  <link rel="stylesheet" href="/styles/page.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "@unbndl/auth": "https://unpkg.com/@unbndl/auth",
+      "@unbndl/html": "https://unpkg.com/@unbndl/html",
+      "@unbndl/view": "https://unpkg.com/@unbndl/view"
+    }
+  }
+  </script>
+  <script type="module">
+    import { define } from "@unbndl/html";
+    import { Auth } from "@unbndl/auth";
+    import { LoginFormElement } from "/js/login-form.js";
+
+    define({
+      "auth-provider": Auth.Provider,
+      "login-form": LoginFormElement
+    });
+  </script>
+</head>
+<body>
+  <auth-provider>
+    <header>
+      <a href="index.html" class="app-name">Workout Tracker</a>
+    </header>
+
+    <main>
+      <h1>Create Account</h1>
+      <login-form api="/auth/register">
+        <label>
+          <span>Nickname:</span>
+          <input name="name" autocomplete="off" />
+        </label>
+        <label>
+          <span>Username:</span>
+          <input name="username" autocomplete="off" />
+        </label>
+        <label>
+          <span>Password:</span>
+          <input type="password" name="password" />
+        </label>
+      </login-form>
+      <p>Already have an account? <a href="login.html">Click here to login!</a></p>
+    </main>
+  </auth-provider>
+</body>
+</html>

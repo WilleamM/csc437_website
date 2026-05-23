@@ -9,62 +9,59 @@
   <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "@unbndl/auth": "https://unpkg.com/@unbndl/auth",
+      "@unbndl/html": "https://unpkg.com/@unbndl/html",
+      "@unbndl/view": "https://unpkg.com/@unbndl/view"
+    }
+  }
+  </script>
+  <script type="module">
+    import { define } from "@unbndl/html";
+    import { Auth } from "@unbndl/auth";
+    import { WorkoutHeaderElement } from "/js/header.js";
+
+    define({
+      "auth-provider": Auth.Provider,
+      "wt-header": WorkoutHeaderElement
+    });
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Workout Tracker</h1>
-      <label id="dark-mode-label">
-        <input type="checkbox" autocomplete="off"/>
-        Dark Mode
-      </label>
-    <nav>
-      <a href="user.html">My Profile</a>
-      <a href="plan.html">My Workout Plan</a>
-      <a href="goal.html">My Goal</a>
-    </nav>
-  </header>
+  <auth-provider>
+    <wt-header></wt-header>
 
-  <div class="welcome-banner">
-    <p>Welcome back, <strong>Bebe</strong> 🫶</p>
-    <p class="welcome-date" id="today-date"></p>
-  </div>
+    <div class="welcome-banner">
+      <p>Welcome back, <strong id="welcome-name"></strong> 🫶</p>
+      <p class="welcome-date" id="today-date"></p>
+    </div>
 
-  <main>
-    <h2>My Workouts</h2>
-    <ul class="workout-list">
-      <li><a href="workout-1.html">Monday — Upper Body</a></li>
-      <li><a href="workout-2.html">Wednesday — Lower Body</a></li>
-      <li><a href="workout-3.html">Friday — Full Body</a></li>
-      <li><a href="workout-4.html">Monday — Push Day</a></li>
-      <li><a href="workout-5.html">Wednesday — Pull Day</a></li>
-    </ul>
-  </main>
+    <main>
+      <h2>My Workouts</h2>
+      <ul class="workout-list">
+        <li><a href="workout-1.html">Monday — Upper Body</a></li>
+        <li><a href="workout-2.html">Wednesday — Lower Body</a></li>
+        <li><a href="workout-3.html">Friday — Full Body</a></li>
+        <li><a href="workout-4.html">Monday — Push Day</a></li>
+        <li><a href="workout-5.html">Wednesday — Pull Day</a></li>
+      </ul>
+    </main>
+  </auth-provider>
 
   <script>
+    if (!localStorage.getItem("un-auth:token")) {
+      window.location.replace("/login.html");
+    }
+
     const dateEl = document.getElementById("today-date");
     const today = new Date();
     dateEl.textContent = today.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-  </script>
 
-  <script>
-    document.getElementById("dark-mode-label").onchange = function(event) {
-      const checked = event.target.checked;
-      const customEvent = new CustomEvent("darkmode:toggle", {
-        bubbles: true,
-        detail: { darkMode:checked}
-      });
-      event.currentTarget.dispatchEvent(customEvent);
-      event.stopPropagation();
-    };
-
-    document.body.addEventListener("darkmode:toggle", function(event) {
-      if (event.detail.darkMode) {
-        event.currentTarget.classList.add("dark-mode");
-      } else {
-        event.currentTarget.classList.remove("dark-mode");
-      }
-    });
+    const nameEl = document.getElementById("welcome-name");
+    const savedName = localStorage.getItem("userName");
+    if (savedName) nameEl.textContent = savedName;
   </script>
-  
 </body>
 </html>
