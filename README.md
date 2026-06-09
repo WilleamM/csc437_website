@@ -1,6 +1,8 @@
 # Workout Tracker
 
-App for tracking workouts. Built for CSC 437.
+https://wimendez.csse.dev/
+
+My app for tracking workouts. Built for CSC 437.
 
 ## How to run it
 1. Clone the repo and run `npm install`
