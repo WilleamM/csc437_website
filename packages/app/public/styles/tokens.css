@@ -1,0 +1,31 @@
+:root {
+  --color-background-page: rgb(240 240 235);
+  --color-background-header: rgb(28 42 64);
+  --color-background-box: rgb(255 255 255);
+
+  --color-text: rgb(40 40 40);
+  --color-text-header: rgb(255 255 255);
+
+  --color-accent: rgb(42 100 160);
+  --color-link: var(--color-accent);
+
+  --color-border: rgb(200 200 195);
+
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+
+}
+
+body.dark-mode {
+  --color-background-page: rgb(18 18 18);
+  --color-background-box: rgb(30 30 30);
+  --color-text: rgb(220 220 220);
+  --color-border: rgb(60 60 60);
+  --color-accent: rgb(100 160 220);
+  --color-link: rgb(100 160 220);
+}
