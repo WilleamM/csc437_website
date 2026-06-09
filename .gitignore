@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+packages/app/dist/
+packages/server/dist/
+
+# Environment variables — never commit secrets
+.env
+**/.env
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log

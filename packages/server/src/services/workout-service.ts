@@ -5,7 +5,9 @@ const exerciseSchema = new Schema<Exercise>({
   name: String,
   href: String,
   muscles: String,
-  equipment: String
+  equipment: String,
+  sets: Number,
+  reps: Number
 });
 
 const workoutSchema = new Schema<Workout>(
@@ -17,7 +19,7 @@ const workoutSchema = new Schema<Workout>(
     plan: String,
     exercises: [exerciseSchema]
   },
-  { collection: "workouts" }
+  { collection: "workouts", timestamps: true }
 );
 
 const WorkoutModel = model<Workout>("Workout", workoutSchema);

@@ -5,6 +5,7 @@ export interface Workout {
   duration: number;
   plan: string;
   exercises: Array<Exercise>;
+  updatedAt?: string;
 }
 
 export interface Exercise {
@@ -12,4 +13,6 @@ export interface Exercise {
   href: string;
   muscles: string;
   equipment: string;
+  sets?: number;
+  reps?: number;
 }

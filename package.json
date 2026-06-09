@@ -16,9 +16,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
-  ,
+  },
   "workspaces": [
-      "packages/*"
-  ]
+    "packages/*"
+  ],
+  "dependencies": {
+    "@unbndl/store": "^1.0.11"
+  }
 }
